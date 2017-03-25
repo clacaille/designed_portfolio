@@ -3,9 +3,14 @@
   width: 100%;
 }
 
+#Shape {
+  fill: #6AA241;
+  stroke: #6AA241;
+}
+
 #eurasia-africa {
   position: absolute;
-  top: 160px;
+  top: 190px;
   right: 210px;
   transform: scale(1.1);
   &:hover {
@@ -15,7 +20,7 @@
 
 #north-america {
   position: absolute;
-  top: 150px;
+  top: 180px;
   right: 850px;
   transform: scale(1.1);
   &:hover {
@@ -25,7 +30,7 @@
 
 #south-america {
   position: absolute;
-  top: 340px;
+  top: 370px;
   right: 810px;
   transform: scale(1.1);
   &:hover {
@@ -35,10 +40,10 @@
 
 #australia {
   position: absolute;
-  top: 450px;
+  top: 480px;
   right: 210px;
-  transform: scale(1.1);
+  transform: scale(1.2);
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
 }

@@ -1,8 +1,14 @@
-<div id="world">
-  <%= inline_svg "north-america.svg", id: "north-america", class: "continent" %>
-  <%= inline_svg "south-america.svg", id: "south-america", class: "continent" %>
-  <%= inline_svg "eurasia-africa.svg", id: "eurasia-africa", class: "continent" %>
-  <%= inline_svg "australia.svg", id: "australia", class: "continent" %>
+<div id="header">
+  <div id="title" class="text-center">
+    <h1>César Lacaille, Web Developer - Digital Nomad</h1>
+    <h2>Welcome to my world !</h2>
+  </div>
+  <div id="world">
+    <%= inline_svg "north-america.svg", id: "north-america", class: "continent" %>
+    <%= inline_svg "south-america.svg", id: "south-america", class: "continent" %>
+    <%= inline_svg "eurasia-africa.svg", id: "eurasia-africa", class: "continent" %>
+    <%= inline_svg "australia.svg", id: "australia", class: "continent" %>
+  </div>
 </div>
 
 <div id="content">
@@ -11,10 +17,31 @@
 
 <% content_for :after_js do %>
   <script>
-    $("#eurasia-africa").click(function() {
-      $('#content').html("<%= j render 'pages/about' %>");
+    $("#north-america").click(function() {
+      $('#content').empty().html("<%= j render 'pages/about' %>");
       $('html, body').animate({
           scrollTop: $("#about").offset().top
+      }, 1000);
+    });
+
+    $("#south-america").click(function() {
+      $('#content').empty().html("<%= j render 'pages/skills' %>");
+      $('html, body').animate({
+          scrollTop: $("#skills").offset().top
+      }, 1000);
+    });
+
+    $("#eurasia-africa").click(function() {
+      $('#content').empty().html("<%= j render 'pages/work' %>");
+      $('html, body').animate({
+          scrollTop: $("#work").offset().top
+      }, 1000);
+    });
+
+    $("#australia").click(function() {
+      $('#content').empty().html("<%= j render 'pages/contact' %>");
+      $('html, body').animate({
+          scrollTop: $("#contact").offset().top
       }, 1000);
     });
   </script>
