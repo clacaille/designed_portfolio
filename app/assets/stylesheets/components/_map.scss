@@ -6,6 +6,12 @@
   transform-origin: 50% 50%;
 }
 
+svg path {
+  fill: transparent;
+  stroke: #22333B;
+  stroke-width: 3px;
+}
+
 .continent {
   transition: transform .5s;
   transform-origin: 50% 50%;
