@@ -1,43 +1,16 @@
-#world {
-  width: 100%;
-  position: absolute;
-  padding-bottom: 50%;
-  div {
-    position: absolute;
-  }
+.world {
+  padding: 20px;
 }
 
-#Shape {
+.shape {
+  transform-origin: 50% 50%;
 }
 
 .continent {
-  transition: transform 0.5s;
+  transition: transform .5s;
+  transform-origin: 50% 50%;
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
-}
-
-#eurasia-africa {
-  width: 35%;
-  top: 25%;
-  right: 17%;
-}
-
-#north-america {
-  width: 20%;
-  top: 25%;
-  left: 17%;
-}
-
-#south-america {
-  width: 12%;
-  top: 55%;
-  left: 29%;
-}
-
-#australia {
-  width: 11%;
-  top: 66%;
-  right: 18%;
 }

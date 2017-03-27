@@ -1,11 +1,8 @@
 <div id="header">
   <div id="title" class="text-center">
-    <h1>César Lacaille, Web Developer - Digital Nomad</h1>
-    <h2>Welcome to my world !</h2>
+    <h1>César Lacaille</h1>
   </div>
-  <div>
-    <%= inline_svg "world-map-146505.svg", class: "world" %>
-  </div>
+    <%= inline_svg "map_animated.svg", class: "world" %>
 </div>
 
 <div id="content">
@@ -14,15 +11,6 @@
 
 <% content_for :after_js do %>
   <script>
-    var allStates = $("svg.world > *");
-
-      allStates.hover(function() {
-
-    allStates.removeClass("on");
-    $(this).addClass("on");
-
-});
-
     $("#title").hide().fadeIn(3000);
 
     $("#north-america").click(function() {
