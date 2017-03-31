@@ -1,15 +1,24 @@
 html, body {
   height: 100%;
   width: 100%;
+  background-color: #BBCECC;
 }
 
 h1 {
-  font-family:'Aventura-Bold';
+  color: white;
 }
 
 #header {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  background-image: image-url('macc.jpg');
+  background-size: cover;
+  background-position: right;
 }
 
+#title {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
