@@ -7,13 +7,10 @@
 </div>
 
 <div id="content">
-
 </div>
 
 <% content_for :after_js do %>
-  <script>
-    $("#title").hide().fadeIn(3000);
-
+  <%= javascript_tag do %>
     $("#north-america").click(function() {
       $('#content').empty().html("<%= j render 'pages/about' %>");
       $('html, body').animate({
@@ -26,6 +23,85 @@
       $('html, body').animate({
           scrollTop: $("#skills").offset().top
       }, 1000);
+      setTimeout(function(){
+        $(".skills-list").removeClass("hidden");
+        var paths = $('.draw');
+
+        paths.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        });
+
+        var tl = new TimelineMax();
+
+        tl.add([
+            TweenLite.to(paths.eq(0), 0.2, {strokeDashoffset: 0, delay: 0.2}),
+            TweenLite.to(paths.eq(1), 0.2, {strokeDashoffset: 0, delay: 0.4}),
+            TweenLite.to(paths.eq(2), 0.2, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(3), 0.2, {strokeDashoffset: 0, delay: 0.8}),
+            TweenLite.to(paths.eq(4), 0.2, {strokeDashoffset: 0, delay: 1.0}),
+            TweenLite.to(paths.eq(5), 0.2, {strokeDashoffset: 0, delay: 1.2}),
+            TweenLite.to(paths.eq(6), 0.2, {strokeDashoffset: 0, delay: 1.4}),
+            TweenLite.to(paths.eq(7), 0.2, {strokeDashoffset: 0, delay: 1.6}),
+            TweenLite.to(paths.eq(8), 0.2, {strokeDashoffset: 0, delay: 1.8}),
+            TweenLite.to(paths.eq(9), 0.2, {strokeDashoffset: 0, delay: 2.0}),
+            TweenLite.to(paths.eq(10), 0.2, {strokeDashoffset: 0, delay: 2.2}),
+            TweenLite.to(paths.eq(11), 0.2, {strokeDashoffset: 0, delay: 2.4}),
+            TweenLite.to(paths.eq(12), 0.2, {strokeDashoffset: 0, delay: 2.6}),
+            TweenLite.to(paths.eq(13), 0.2, {strokeDashoffset: 0, delay: 2.8}),
+            TweenLite.to(paths.eq(14), 0.2, {strokeDashoffset: 0, delay: 3.0}),
+            TweenLite.to(paths.eq(15), 0.2, {strokeDashoffset: 0, delay: 3.2}),
+            TweenLite.to(paths.eq(16), 0.2, {strokeDashoffset: 0, delay: 3.4}),
+            TweenLite.to(paths.eq(17), 0.2, {strokeDashoffset: 0, delay: 3.6}),
+            TweenLite.to(paths.eq(18), 0.2, {strokeDashoffset: 0, delay: 0.2}),
+            TweenLite.to(paths.eq(19), 0.2, {strokeDashoffset: 0, delay: 0.4}),
+            TweenLite.to(paths.eq(20), 0.2, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(21), 0.2, {strokeDashoffset: 0, delay: 0.8}),
+            TweenLite.to(paths.eq(22), 0.2, {strokeDashoffset: 0, delay: 1.0}),
+            TweenLite.to(paths.eq(23), 0.2, {strokeDashoffset: 0, delay: 1.2}),
+            TweenLite.to(paths.eq(24), 0.2, {strokeDashoffset: 0, delay: 1.4}),
+            TweenLite.to(paths.eq(25), 0.2, {strokeDashoffset: 0, delay: 1.6}),
+            TweenLite.to(paths.eq(26), 0.2, {strokeDashoffset: 0, delay: 0.2}),
+            TweenLite.to(paths.eq(27), 0.2, {strokeDashoffset: 0, delay: 0.4}),
+            TweenLite.to(paths.eq(28), 0.2, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(29), 0.2, {strokeDashoffset: 0, delay: 0.8}),
+            TweenLite.to(paths.eq(30), 0.2, {strokeDashoffset: 0, delay: 0.2}),
+            TweenLite.to(paths.eq(31), 0.2, {strokeDashoffset: 0, delay: 0.4}),
+            TweenLite.to(paths.eq(32), 0.2, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(33), 0.2, {strokeDashoffset: 0, delay: 0.8}),
+            TweenLite.to(paths.eq(34), 0.2, {strokeDashoffset: 0, delay: 1.0}),
+            TweenLite.to(paths.eq(35), 0.2, {strokeDashoffset: 0, delay: 1.2}),
+            TweenLite.to(paths.eq(36), 0.2, {strokeDashoffset: 0, delay: 1.4}),
+            TweenLite.to(paths.eq(37), 0.2, {strokeDashoffset: 0, delay: 1.6}),
+            TweenLite.to(paths.eq(38), 0.2, {strokeDashoffset: 0, delay: 1.8}),
+            TweenLite.to(paths.eq(39), 0.2, {strokeDashoffset: 0, delay: 2.0}),
+            TweenLite.to(paths.eq(40), 0.2, {strokeDashoffset: 0, delay: 2.2}),
+            TweenLite.to(paths.eq(41), 0.2, {strokeDashoffset: 0, delay: 2.4}),
+            TweenLite.to(paths.eq(42), 0.2, {strokeDashoffset: 0, delay: 2.6}),
+            TweenLite.to(paths.eq(43), 0.2, {strokeDashoffset: 0, delay: 2.8}),
+            TweenLite.to(paths.eq(44), 0.2, {strokeDashoffset: 0, delay: 3.0}),
+            TweenLite.to(paths.eq(45), 0.2, {strokeDashoffset: 0, delay: 3.2}),
+            TweenLite.to(paths.eq(46), 0.2, {strokeDashoffset: 0, delay: 0.2}),
+            TweenLite.to(paths.eq(47), 0.2, {strokeDashoffset: 0, delay: 0.4}),
+            TweenLite.to(paths.eq(48), 0.2, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(49), 0.2, {strokeDashoffset: 0, delay: 0.8}),
+            TweenLite.to(paths.eq(50), 0.2, {strokeDashoffset: 0, delay: 1.0}),
+            TweenLite.to(paths.eq(51), 0.2, {strokeDashoffset: 0, delay: 1.2}),
+            TweenLite.to(paths.eq(52), 0.2, {strokeDashoffset: 0, delay: 1.4}),
+            TweenLite.to(paths.eq(53), 0.2, {strokeDashoffset: 0, delay: 1.6}),
+            TweenLite.to(paths.eq(54), 0.2, {strokeDashoffset: 0, delay: 1.8}),
+            TweenLite.to(paths.eq(55), 0.2, {strokeDashoffset: 0, delay: 2.0}),
+            TweenLite.to(paths.eq(56), 0.2, {strokeDashoffset: 0, delay: 2.2}),
+            TweenLite.to(paths.eq(57), 0.2, {strokeDashoffset: 0, delay: 2.4}),
+            TweenLite.to(paths.eq(58), 0.2, {strokeDashoffset: 0, delay: 2.6}),
+            TweenLite.to(paths.eq(59), 0.2, {strokeDashoffset: 0, delay: 2.8}),
+            TweenLite.to(paths.eq(60), 0.2, {strokeDashoffset: 0, delay: 0.2}),
+            TweenLite.to(paths.eq(61), 0.2, {strokeDashoffset: 0, delay: 0.4}),
+            TweenLite.to(paths.eq(62), 0.2, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(63), 0.2, {strokeDashoffset: 0, delay: 0.8}),
+            TweenLite.to(paths.eq(64), 0.2, {strokeDashoffset: 0, delay: 1.0}),
+            TweenLite.to(paths.eq(65), 0.2, {strokeDashoffset: 0, delay: 1.2})
+        ]);
+      }, 1000);
     });
 
     $("#eurasia-africa").click(function() {
@@ -35,14 +111,13 @@
       }, 1000);
     });
 
-    $("#australia").hover(function() {
-      event.preventDefault();
-    })
     $("#australia").click(function() {
       $('#content').empty().html("<%= j render 'pages/contact' %>");
       $('html, body').animate({
           scrollTop: $("#contact").offset().top
       }, 1000);
     });
-  </script>
+
+
+  <% end %>
 <% end %>

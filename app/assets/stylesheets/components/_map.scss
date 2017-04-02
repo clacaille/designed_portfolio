@@ -6,7 +6,7 @@
   transform-origin: 50% 50%;
 }
 
-svg path {
+svg.world path {
   fill: transparent;
   stroke: #22333B;
   stroke-width: 3px;
@@ -19,4 +19,31 @@ svg path {
     transform: scale(1.1);
     cursor: pointer;
   }
+}
+
+#australia {
+  transition: transform .5s;
+  transform-origin: 50% 50%;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+.map-label {
+  display: none;
+  width: 100px;
+  font-family: "Helvetica";
+  fill: #22333B;
+  transition: font-size .5s, transform .5s;
+}
+
+.label-hover {
+  font-size: 25px;
+  transform: translate(-10px);
+}
+
+.aus-label-hover {
+  font-size: 25px;
+  transform: translate(-15px, 5px);
 }
