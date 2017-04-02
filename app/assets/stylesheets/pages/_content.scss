@@ -1,8 +1,25 @@
+.content {
+  height: 100vh;
+  display: flex;
+}
+
+.block-title {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block-content {
+  max-height: 100%;
+  overflow: scroll;
+}
+
 .content-avatar {
   border-radius: 50%;
   width: 200px;
 }
 
 .content-text {
-  padding: 10px 250px;
+  padding: 30px;
 }

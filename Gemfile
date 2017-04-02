@@ -17,7 +17,6 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'inline_svg'
 
-
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

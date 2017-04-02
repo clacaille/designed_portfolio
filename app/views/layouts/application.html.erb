@@ -7,10 +7,12 @@
     <title>César Lacaille · Web Developer</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
     <%= yield %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" %>
     <%= javascript_include_tag 'application' %>
     <%= yield :after_js %>
   </body>
