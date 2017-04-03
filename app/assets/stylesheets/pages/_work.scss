@@ -1,0 +1,25 @@
+#work {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-content {
+  flex: 1 0 auto;
+  background-image: image-url('work-bg.jpg');
+  background-size: auto 100%;
+  background-repeat:no-repeat;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.macbook {
+  background-color: #F4E0E0;
+  border-radius: 5px;
+  // height: 280px;
+  // width: 420px;
+  height: 200px;
+  width: 350px;
+  transform: rotate(-1deg);
+}
