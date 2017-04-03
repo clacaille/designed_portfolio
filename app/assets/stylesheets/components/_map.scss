@@ -14,19 +14,28 @@ svg.world path {
 
 .continent {
   transition: transform .5s;
-  transform-origin: 50% 50%;
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
 }
 
+#north-america {
+  transform-origin: 89px 106px;
+}
+
+#south-america {
+  transform-origin: 182px 286px;
+}
+
+#eurasia-africa {
+  transform-origin: 539px 92px;
+}
+
 #australia {
-  transition: transform .5s;
-  transform-origin: 50% 50%;
+  transform-origin: 670px 325px;
   &:hover {
     transform: scale(1.2);
-    cursor: pointer;
   }
 }
 

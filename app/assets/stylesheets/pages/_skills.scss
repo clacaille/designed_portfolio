@@ -6,7 +6,7 @@
 
 .skills-content {
   flex: 1 0 auto;
-  background-image: image-url('skills-bg.jpg');
+  background-image: image-url('test.png');
   background-size: cover;
   background-position: bottom;
   position: relative;
@@ -19,5 +19,16 @@
   svg {
     height: 50vh;
     width: 50vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .skills-list {
+    bottom: 0%;
+    left: 5%;
+    svg {
+      height: 60vh;
+      width: 65vw;
+    }
   }
 }
