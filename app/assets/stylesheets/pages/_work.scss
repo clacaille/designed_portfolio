@@ -6,21 +6,15 @@
 
 .work-content {
   flex: 1 0 auto;
-  background-image: image-url('work-bg.jpg');
+  background-image: image-url('test.jpg');
   background-size: cover;
-  background-repeat:no-repeat;
-  background-position: bottom;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-// .macbook {
-//   background-color: #F4E0E0;
-//   border-radius: 5px;
-//   // height: 280px;
-//   // width: 420px;
-//   height: 200px;
-//   width: 350px;
-//   transform: rotate(-1deg);
-// }
+.macbook {
+  height: 75vh;
+  width: 75vw;
+}
