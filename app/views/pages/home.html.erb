@@ -16,6 +16,12 @@
       $('html, body').animate({
           scrollTop: $("#about").offset().top
       }, 1000);
+
+      $('.arrow-up').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+      });
     });
 
     $("#south-america").click(function() {
@@ -23,6 +29,13 @@
       $('html, body').animate({
           scrollTop: $("#skills").offset().top
       }, 1000);
+
+      $('.arrow-up').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+      });
+
       setTimeout(function(){
         $(".skills-list").removeClass("hidden");
         var paths = $('.draw');
@@ -109,6 +122,20 @@
       $('html, body').animate({
           scrollTop: $("#work").offset().top
       }, 1000);
+
+      $('.arrow-up').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+      });
+
+      $('.works').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
     });
 
     $("#australia").click(function() {
@@ -116,8 +143,12 @@
       $('html, body').animate({
           scrollTop: $("#contact").offset().top
       }, 1000);
+
+      $('.arrow-up').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+      });
     });
-
-
   <% end %>
 <% end %>

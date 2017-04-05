@@ -28,4 +28,12 @@ $(document).ready(function() {
   }, function() {
     $('#contact-label').removeClass("aus-label-hover");
   });
+
+  $(".arrow-up").click(function(e) {
+    e.preventDefault();
+    console.log('test');
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1000);
+  });
 });

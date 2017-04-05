@@ -3,6 +3,20 @@
   display: flex;
 }
 
+.content-title {
+  position: relative;
+}
+
+.arrow-up {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-size: 40px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .block-title {
   flex: 0 0 50%;
   display: flex;
