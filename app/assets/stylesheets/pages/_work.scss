@@ -6,15 +6,15 @@
 
 .work-content {
   flex: 1 0 auto;
-  background-image: image-url('work-bg.png');
+  background-image: image-url('test.jpg');
   background-size: cover;
-  background-position: bottom;
-  position: relative;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .macbook {
-  background-image: image-url('wrapper.png');
-  // background-color: #F4E0E0;
-  border-radius: 5px;
-  margin: 10vh auto;
+  height: 75vh;
+  width: 75vw;
 }
