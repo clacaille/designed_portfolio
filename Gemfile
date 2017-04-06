@@ -16,7 +16,6 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'inline_svg'
-gem 'mail_form'
 
 group :development, :test do
   gem 'binding_of_caller'
