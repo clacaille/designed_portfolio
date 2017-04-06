@@ -6,8 +6,34 @@
 
 .contact-content {
   flex: 1 0 auto;
-  background-image: image-url('test.jpg');
+  background-image: image-url('contact-bg.jpg');
   background-size: cover;
   background-position: bottom;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  height: 60vh;
+  width: 40vw;
+  transform: rotate(-0.5deg);
+}
+
+@media (max-width: 670px) and (max-height: 800px) {
+  .form-wrapper {
+    width: 85vw;
+  }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .form-wrapper {
+    width: 85vw;
+  }
+}
+
+@media (width: 768px) and (height: 1024px) {
+  .form-wrapper {
+    width: 85vw;
+  }
 }
