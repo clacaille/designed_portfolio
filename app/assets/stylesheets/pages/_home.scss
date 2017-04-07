@@ -4,9 +4,6 @@ html, body {
   background-color: white;
 }
 
-h1 {
-  color: white;
-}
 
 #header {
   height: 100vh;
@@ -14,6 +11,9 @@ h1 {
   background-image: image-url('macc.jpg');
   background-size: cover;
   background-position: right;
+  h1 {
+    color: white;
+  }
 }
 
 #title {
