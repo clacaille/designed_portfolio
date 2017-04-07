@@ -20,7 +20,19 @@
   transform: rotate(-0.5deg);
 }
 
-@media (max-width: 670px) and (max-height: 800px) {
+@media (max-width: 850px) {
+  .form-wrapper {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 670px) {
+  .form-wrapper {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 490px) and (max-height: 800px) {
   .form-wrapper {
     width: 85vw;
   }
