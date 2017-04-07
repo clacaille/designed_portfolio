@@ -14,15 +14,6 @@
   align-items: center;
 }
 
-.device {
-  height: 527px;
-  width: 620px;
-  background-image: image-url('imac.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-}
-
 .works {
   position: relative;
   height: 327px;
@@ -34,8 +25,15 @@
   }
 }
 
-@media (max-width: 730px) {
-  .device {
-    background-image: image-url('ipad.svg');
-  }
+#magazine{
+  height: 500px;
+  width: 750px;
 }
+#magazine .page{
+  background-color:white;
+  line-height:300px;
+  font-size:20px;
+  text-align:center;
+}
+
+
