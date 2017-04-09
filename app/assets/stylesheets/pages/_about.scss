@@ -1,0 +1,24 @@
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content {
+  flex: 1 0 auto;
+  background-image: image-url('about-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  i {
+    flex-grow: 1;
+  }
+}
+
+.about-text {
+  flex-grow: 2;
+  font-size: 20px;
+}

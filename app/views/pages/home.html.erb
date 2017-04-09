@@ -22,6 +22,18 @@
             scrollTop: 0
         }, 1000);
       });
+
+      var fullText = $('#about-paragraph').html();
+      $('#about-paragraph').empty();
+
+      var splitText = fullText.split(/(?=.)/u);
+
+      var queue = splitText;
+
+      $(document).keypress(function(){
+        var val = queue.splice(0, 10);
+        $('#about-paragraph').append(val);
+      });
     });
 
     $("#south-america").click(function() {
