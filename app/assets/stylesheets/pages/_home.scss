@@ -4,11 +4,19 @@ html, body {
   background-color: white;
 }
 
+body::after{
+    position: absolute;
+    width:0;
+    height:0;
+    overflow:hidden;
+    z-index:-1;
+    content: image-url('about-bg.jpg') image-url("blur-about-bg.jpg") image-url("contact-bg.jpg") image-url("home-bg.jpg") image-url("skills-bg.jpg");
+}
 
 #header {
   height: 100vh;
   display: flex;
-  background-image: image-url('macc.jpg');
+  background-image: image-url('home-bg.jpg');
   background-size: cover;
   background-position: right;
   h1 {
@@ -17,6 +25,7 @@ html, body {
 }
 
 #title {
+  display: none;
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
