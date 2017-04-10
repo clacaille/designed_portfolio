@@ -2,10 +2,6 @@
   padding: 20px;
 }
 
-.shape {
-  transform-origin: 50% 50%;
-}
-
 svg.world path {
   fill: transparent;
   stroke: #22333B;
@@ -54,5 +50,5 @@ svg.world path {
 
 .aus-label-hover {
   font-size: 25px;
-  transform: translate(-10px, 3px);
+  transform: translate(-10px);
 }
