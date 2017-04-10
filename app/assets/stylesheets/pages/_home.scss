@@ -10,7 +10,7 @@ body::after{
     height:0;
     overflow:hidden;
     z-index:-1;
-    content: image-url('about-bg.jpg') image-url("blur-about-bg.jpg") image-url("contact-bg.jpg") image-url("home-bg.jpg") image-url("skills-bg.jpg");
+    content: image-url('about-bg.jpg') image-url("blur-about-bg.jpg") image-url("contact-bg.jpg") image-url("skills-bg.jpg");
 }
 
 #header {
