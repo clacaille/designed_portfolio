@@ -28,12 +28,20 @@
 #magazine{
   height: 500px;
   width: 750px;
+  .page{
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+  }
+  .even {
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+  }
+  .odd {
+    background-image:linear-gradient(right, #fff 95%, #cacaca 100%);
+  }
 }
-#magazine .page{
-  background-color:white;
-  line-height:300px;
-  font-size:20px;
-  text-align:center;
-}
+
 
 

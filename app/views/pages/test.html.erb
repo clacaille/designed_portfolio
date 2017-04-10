@@ -1,0 +1,19 @@
+<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque eius possimus vero repellendus obcaecati magnam qui omnis quia doloremque quo, explicabo ut praesentium quae accusantium accusamus quos voluptates assumenda?</h1>
+<h2></h2>
+<h3></h3>
+
+<% content_for :after_js do %>
+  <%= javascript_tag do %>
+    var fullText = $('h1').html();
+    $('h1').empty();
+
+    var splitText = fullText.split(/(?=.)/u);
+
+    var queue = splitText;
+
+    $(document).keypress(function(){
+      var val = queue.splice(0, 10);
+      $("h1").append(val);
+    });
+  <% end %>
+<% end %>

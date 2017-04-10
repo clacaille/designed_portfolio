@@ -22,6 +22,24 @@
             scrollTop: 0
         }, 1000);
       });
+
+      var fullText = $('#about-paragraph').html();
+      $('#about-paragraph').empty();
+
+      var splitText = fullText.split(/(?=.)/u);
+
+      var queue = splitText;
+
+      $(document).keypress(function(){
+        $('.about-content').css("background-image", "url(<%= asset_path('blur-about-bg.jpg') %>)");
+        var val = queue.splice(4, 8);
+        $('#about-paragraph').append(val);
+
+        var target = $('#about-paragraph').text();
+        var breaks = target.replace(/\!/g,'!<br><br>');
+
+        $('#about-paragraph').html(breaks);
+      });
     });
 
     $("#south-america").click(function() {
@@ -130,10 +148,15 @@
       });
 
       $("#magazine").turn({
-          autoCenter: true,
           duration: 1000,
           page: 2
-        });
+      });
+      $(window).bind('keydown', function(e){
+        if (e.keyCode==37)
+            $('#magazine').turn('previous');
+        else if (e.keyCode==39)
+            $('#magazine').turn('next');
+      });
     });
 
     $("#australia").click(function() {

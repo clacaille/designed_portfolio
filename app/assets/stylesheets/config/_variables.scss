@@ -3,17 +3,17 @@
  * ------------------------------------- */
 // Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-$base-font: "Raleway", "Helvetica", "sans-serif";
+// $base-font: "Raleway", "Helvetica", "sans-serif";
 
 
 // Local fonts (uncomment following lines)
 @font-face {
-  font-family: "Aventura";
-  src: font_url('Aventura.otf') format('truetype');
+  font-family: "Arvin";
+  src: font_url('Arvin.ttf') format('truetype');
 }
-$aventura: "Aventura";
-$header-font: $aventura;
-
+$arvin: "Arvin";
+$header-font: $arvin;
+$base-font: $arvin;
 
 // Font-size and line-height
 $base-size: 16px;
