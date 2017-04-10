@@ -43,15 +43,16 @@ svg.world path {
   display: none;
   width: 100px;
   fill: black;
+  font-size: 20px;
   transition: font-size .5s, transform .5s;
 }
 
 .label-hover {
   font-size: 25px;
-  transform: translate(-10px);
+  transform: translate(-5px);
 }
 
 .aus-label-hover {
   font-size: 25px;
-  transform: translate(-15px, 5px);
+  transform: translate(-10px, 3px);
 }
