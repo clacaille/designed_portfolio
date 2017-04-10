@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def test
   end
+
+  def sandbox
+  end
 end
