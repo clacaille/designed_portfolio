@@ -13,12 +13,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  i {
-    flex-grow: 1;
+}
+
+.type-action {
+  flex-grow: 1;
+  h3 {
+    margin: 0;
   }
 }
 
 .about-text {
   flex-grow: 2;
   font-size: 20px;
+  font-weight: bold;
+  padding: 0 10vw;
+  margin-bottom: 50px;
+  overflow: auto;
+}
+
+#about-paragraph {
+  height: 100px;
+  margin-bottom: 50px;
 }

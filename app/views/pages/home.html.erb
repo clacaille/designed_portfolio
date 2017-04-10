@@ -31,8 +31,14 @@
       var queue = splitText;
 
       $(document).keypress(function(){
-        var val = queue.splice(0, 10);
+        $('.about-content').css("background-image", "url(<%= asset_path('blur-about-bg.jpg') %>)");
+        var val = queue.splice(4, 8);
         $('#about-paragraph').append(val);
+
+        var target = $('#about-paragraph').text();
+        var breaks = target.replace(/\!/g,'!<br><br>');
+
+        $('#about-paragraph').html(breaks);
       });
     });
 
