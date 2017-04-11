@@ -1,25 +1,131 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97239747-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <div id="work">
   <div class="content-title text-center">
     <h2>MY WORK</h2>
     <i class="fa fa-chevron-up arrow-up" aria-hidden="true"></i>
   </div>
   <div class="work-content">
-    <div id="magazine">
-      <div class="hard fixed"><h1>Cover</h1></div>
-      <div class="hard"></div>
-      <div>
-        <div><h1>index</h1></div>
-        <div id="work-timzy">
 
-        </div>
-        <div id="work-surfcamps">
+    <div id="timzy" class="works">
+      <i id="close-timzy" class="fa fa-times fa-5x close-work" aria-hidden="true"></i>
+      <div class="works-images">
+        <div id="timzy-carousel" class="carousel slide" data-ride="carousel">
+          <!-- Items -->
+          <div class="carousel-inner">
+              <div class="item active">
+                  <%= image_tag "timzy.png", class: "works-image" %>
+              </div>
+              <div class="item">
+                  <%= image_tag "timzy2.png", class: "works-image" %>
+              </div>
+              <div class="item">
+                  <%= image_tag "timzy3.png", class: "works-image" %>
+              </div>
+              <div class="item">
+                  <%= image_tag "timzy4.png", class: "works-image" %>
+              </div>
+          </div>
 
+          <a href="#timzy-carousel" class="left carousel-control" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a href="#timzy-carousel" class="right carousel-control" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
         </div>
       </div>
-      <div ><h1>Timzy</h1></div>
-      <div><h1>Timzy</h1></div>
-      <div ><h1>Surfcamps</h1></div>
-      <div><h1>Surfcamps</h1></div>
+      <div class="works-text">
+        <div class="works-tags">
+          <div class="works-tag"><p>Ruby On Rails</p></div>
+          <div class="works-tag"><p>HTML5</p></div>
+          <div class="works-tag"><p>SCSS</p></div>
+          <div class="works-tag"><p>Advanced Javascript</p></div>
+          <div class="works-tag"><p>Google Analytics API</p></div>
+        </div>
+        <div class="works-description text-center">
+          <p>Timzy is a SAAS solution which helps you track all your web actions in marketing, communication, product, design, development in a simple timeline. Being connected to Google Analytics API, Timzy helps you follow the performance of all your actions through a readable interface.</p>
+        </div>
+        <div class="text-center">
+          <%= link_to "Visit Timzy", "https://www.timzy.io", target: "blank", class: "btn btn-primary btn-bigger" %>
+        </div>
+      </div>
+    </div>
+
+    <div id="surfcamps" class="works">
+      <i id="close-surfcamps" class="fa fa-times fa-5x close-work" aria-hidden="true"></i>
+      <div class="works-images">
+        <div id="surfcamps-carousel" class="carousel slide" data-ride="carousel">
+          <!-- Items -->
+          <div class="carousel-inner">
+              <div class="item active">
+                  <%= image_tag "surfcamps.png", class: "works-image" %>
+              </div>
+              <div class="item">
+                  <%= image_tag "surfcamps2.png", class: "works-image" %>
+              </div>
+              <div class="item">
+                  <%= image_tag "surfcamps3.png", class: "works-image" %>
+              </div>
+          </div>
+
+          <a href="#surfcamps-carousel" class="left carousel-control" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a href="#surfcamps-carousel" class="right carousel-control" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="works-text">
+        <div class="works-tags">
+          <div class="works-tag"><p>Ruby On Rails</p></div>
+          <div class="works-tag"><p>HTML5</p></div>
+          <div class="works-tag"><p>SCSS</p></div>
+          <div class="works-tag"><p>Javascript</p></div>
+          <div class="works-tag"><p>Google Maps API</p></div>
+        </div>
+        <div class="works-description text-center">
+          <p>Surfcamps is a plateform where everyone can find or propose surfcamps all around the world.</p>
+        </div>
+        <div class="text-center">
+          <%= link_to "Visit Surfcamps", "http://surfcamps.herokuapp.com", target: "blank", class: "btn btn-primary btn-bigger" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="items-group">
+        <div class="item">
+          <div id="timzy-trigger" class="block">
+            <div class="text">
+              <h2>TIMZY</h2>
+              <p>Track your web actions and follow their performance</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div id="surfcamps-trigger" class="block">
+            <div class="text">
+              <h2>SURFCAMPS</h2>
+              <p>Meet people and surf with them all around the world</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navigations">
+        <ul class="dots"></ul>
+      </div>
     </div>
   </div>
 </div>
+
+
