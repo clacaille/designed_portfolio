@@ -166,8 +166,7 @@
       $("#surfcamps").hide();
 
       var imags = [
-        'https://static.pexels.com/photos/379837/pexels-photo-379837.jpeg',
-        'https://static.pexels.com/photos/379838/pexels-photo-379838.jpeg'
+        'https://static.pexels.com/photos/27665/pexels-photo-27665.jpg'
       ];
 
       $('.slider .item').each(function(i){
@@ -180,10 +179,6 @@
         }
 
         $(this).attr('id', 'slide-'+i);
-
-        $(this).prepend(
-          $('<div>', {class: 'bg', style: 'background-image: url(' + imags[i] + ');'})
-        )
 
         $(this).find('.block').css('background-image', 'url(' + imags[i] + ')')
 
