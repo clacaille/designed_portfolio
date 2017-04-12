@@ -24,6 +24,16 @@ body::after{
   }
 }
 
+.fa-linkedin-square {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #22333B;
+  &:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+}
+
 #title {
   display: none;
   flex-basis: 50%;
@@ -35,5 +45,23 @@ body::after{
 @media (max-width: 750px) {
   #header {
     flex-direction: column;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
   }
 }

@@ -1,13 +1,28 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97239747-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <div id="header">
+  <%= link_to "https://linkedin.com/in/cesar-lacaille", target: "blank" do %>
+    <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+  <% end %>
   <div id="title" class="text-center">
     <h1>CESAR</h1>
-    <h2>PORTFOLIO OF A WEB DEVELOPER & DIGITAL NOMAD</h2>
+    <%= image_tag "avatar.jpg", class: "avatar-big" %>
+    <h2>FULLSTACK WEB DEVELOPER</h2>
   </div>
     <%= inline_svg "map_animated.svg", class: "world" %>
 </div>
 
 <div id="content">
 </div>
+
 
 <% content_for :after_js do %>
   <%= javascript_tag do %>
@@ -147,15 +162,68 @@
         }, 1000);
       });
 
-      $("#magazine").turn({
-          duration: 1000,
-          page: 2
+      $("#timzy").hide();
+      $("#surfcamps").hide();
+
+      var imags = [
+        'https://static.pexels.com/photos/379837/pexels-photo-379837.jpeg',
+        'https://static.pexels.com/photos/379838/pexels-photo-379838.jpeg'
+      ];
+
+      $('.slider .item').each(function(i){
+
+        if(i == 0){
+
+          $(this).addClass('active');
+          $(this).next().addClass('next');
+          $(this).prev().addClass('prev');
+        }
+
+        $(this).attr('id', 'slide-'+i);
+
+        $(this).prepend(
+          $('<div>', {class: 'bg', style: 'background-image: url(' + imags[i] + ');'})
+        )
+
+        $(this).find('.block').css('background-image', 'url(' + imags[i] + ')')
+
+        $('.navigations .dots').append(
+          $('<li>', {class: i == 0 ? 'active' : '', id: i}).on('click', function(){
+          var cSlide = $('.slider #slide-'+$(this).attr('id'));
+
+            $('.navigations .dots li').removeClass('active');
+            $(this).addClass('active');
+
+            $('.slider .item').removeClass('active prev next');
+            cSlide.addClass('active');
+            cSlide.next().addClass('next');
+            cSlide.prev().addClass('prev');
+          })
+        )
+      })
+
+      $("#timzy-trigger").click(function() {
+        $("#timzy").slideToggle();
+        $(".slider").css("filter", "blur(5px)");
+        $(".content-title>h2").empty().html('TIMZY');
       });
-      $(window).bind('keydown', function(e){
-        if (e.keyCode==37)
-            $('#magazine').turn('previous');
-        else if (e.keyCode==39)
-            $('#magazine').turn('next');
+
+      $("#close-timzy").click(function () {
+        $("#timzy").slideToggle();
+        $(".slider").css("filter", "");
+        $(".content-title>h2").empty().html('MY WORK');
+      });
+
+      $("#surfcamps-trigger").click(function() {
+        $("#surfcamps").slideToggle();
+        $(".slider").css("filter", "blur(5px)");
+        $(".content-title>h2").empty().html('SURFCAMPS');
+      });
+
+      $("#close-surfcamps").click(function () {
+        $("#surfcamps").slideToggle();
+        $(".slider").css("filter", "");
+        $(".content-title>h2").empty().html('MY WORK');
       });
     });
 
