@@ -13,6 +13,8 @@
   .items-group{
     width: 100%;
     height: 100%;
+    background-image: image-url("work-bg.jpg");
+    background-size: cover;
     position: relative;
 
     .item{
@@ -30,17 +32,17 @@
       position: absolute;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
       box-sizing: border-box;
+      overflow: auto;
 
-      &:hover{
+      .bg{
+        filter: blur(5px);
+      }
 
-        .bg{
-          filter: blur(5px);
-        }
-
-        .block{
-          box-shadow: 0px 0px 50px #333;
-        }
+      .block{
+        box-shadow: 0px 0px 50px #333;
+        background-position: top;
       }
 
       &.active{
@@ -58,13 +60,13 @@
         transform: scale(1.03);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
       }
 
       .block{
         width: 100%;
         height: 100%;
         padding: 20px;
+        margin: 20px 20px;
         color: #ffffff;
         transition:box-shadow 0.5s;
         max-width: 300px;
@@ -75,9 +77,9 @@
         box-sizing: border-box;
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
-        box-shadow: none;
+        box-shadow: 0px 0px 70px #111;
         z-index: 2;
+        transition: transform .5s;
 
         &:hover {
           cursor: pointer;
@@ -91,7 +93,7 @@
           flex-direction: column;
           justify-content: center;
           background-position: center;
-          background-attachment: fixed;
+
           z-index: 2;
         }
 
@@ -107,7 +109,7 @@
         }
 
         &:hover{
-          box-shadow: 0px 0px 70px #111;
+          transform: scale(1.1);
 
           .circleLight{
             opacity: 0.4;
@@ -160,4 +162,11 @@
 
 _::-webkit-full-page-media, _:future, :root .items-group {
   height: 90vh;
+}
+
+@media (max-width: 720px) {
+  .items-group {
+    background-image: image-url("test.JPG");
+    background-size: cover;
+  }
 }
