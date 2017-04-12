@@ -16,7 +16,6 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'inline_svg'
-gem "jquery-slick-rails"
 
 
 group :development, :test do
