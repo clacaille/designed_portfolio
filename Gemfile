@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.4.3'
 
-gem 'rails', '5.0.1'
+gem 'rails', '5.0.7.2'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
@@ -11,7 +11,7 @@ gem 'redis'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', ">= 3.4.1"
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
